@@ -27,4 +27,9 @@ public class Motorcycle extends Vehicle {
     public void wheelie() {
         System.out.println("Doing a wheelie!");
     }
+
+    public int getSpeed() {
+        return speed;
+    }
+
 }

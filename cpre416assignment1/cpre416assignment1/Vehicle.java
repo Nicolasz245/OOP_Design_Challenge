@@ -1,9 +1,9 @@
 package cpre416assignment1;
 
 public abstract class Vehicle implements Drivable {
-    protected String make;
-    protected String model;
-    protected int year;
+    private final String make;
+    private final String model;
+    private final int year;
 
     public Vehicle(String make, String model, int year) {
         this.make = make;
@@ -17,4 +17,10 @@ public abstract class Vehicle implements Drivable {
     public String getMake() { return make; }
     public String getModel() { return model; }
     public int getYear() { return year; }
+
+    @Override
+    public String toString() {
+        return year + " " + make + " " + model;
+    }
+
 }

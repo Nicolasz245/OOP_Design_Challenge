@@ -3,8 +3,8 @@ package cpre416assignment1;
 public class Test {
     public static void main(String[] args) {
         // Polymorphism: Vehicle reference to subclass objects
-        Vehicle car = new Car("Toyota", "Camry", 2020);
-        Vehicle motorcycle = new Motorcycle("Harley-Davidson", "Sportster", 2019);
+        Drivable car = new Car("Toyota", "Camry", 2020);
+        Drivable motorcycle = new Motorcycle("Harley-Davidson", "Sportster", 2019);
 
         car.startEngine();       // Output: Car engine started.
         car.accelerate(60);      // Output: Car accelerating to 60 km/h.
@@ -20,7 +20,7 @@ public class Test {
         myCar.honk(3);   // Output: Beep Beep Beep 
 
         // Data Coupling (Car.setSpeed)
-        myCar.setSpeed(70); // Calls adjustSpeed(70)
+        myCar.accelerate(70); // Calls adjustSpeed(70)
 
         // Stamp Coupling (Garage.parkVehicle)
         Garage garage = new Garage();

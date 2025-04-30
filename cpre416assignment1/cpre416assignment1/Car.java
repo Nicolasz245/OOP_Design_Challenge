@@ -33,13 +33,10 @@ public class Car extends Vehicle {
         System.out.println();
     }
 
-    // Data Coupling: Passes primitive `int`
-    public void setSpeed(int speed) {
-        adjustSpeed(speed);
+    private int speed;
+
+    public int getSpeed() {
+        return speed;
     }
 
-    private void adjustSpeed(int newSpeed) {
-        this.speed = newSpeed;
-        System.out.println("Speed adjusted to " + newSpeed + " km/h.");
-    }
 }
